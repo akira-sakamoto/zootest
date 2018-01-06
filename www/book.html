@@ -1,0 +1,24 @@
+<ons-page id="book" ng-controller="AnimalListController as list" modifier="background">
+    <!-- ツールバー -->
+    <ons-toolbar modifier="toolbar">
+        <div class="left">
+            <ons-back-button modifier="toolbar">Back</ons-back-button>
+        </div>
+        <div class="center">動物図鑑</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-qrcode" class="toolbarIcon"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    
+    <!-- 本体だよ -->
+    <ons-list>
+        <ons-list-item ons-lazy-repeat="list.delegate">
+            <div class="animalListDiv" ng-click="navi.pushPage('detail.html', {data: {animal: animal}})">
+                <img ng-src="assets/image/thumbnails/{{thumbnail}}" class="thumbnail">
+                <div class="animalListName">{{jpName}}</div>
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

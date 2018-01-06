@@ -1,0 +1,66 @@
+/* app.less */
+
+@import "mixin.less";
+
+/* 定数 */
+@bgColor: rgb(20, 160, 252);
+
+/* toolbar */
+.toolbar--toolbar {
+    background-color: @bgColor;
+}
+.toolbar--toolbar__center,
+.toolbarIcon,
+.back-button--toolbar,
+.back-button--toolbar__label {
+    color: white;
+}
+.back-button--toolbar__icon {
+    fill: white;
+}
+.toolbar--toolbar__center {
+    font-weight: bold;
+}
+.toolbarIcon {
+    font-size: 24px;
+}
+
+/* page */
+.page--background__background {
+    background-image: url('../assets/image/background.png');
+    background-size: cover;
+}
+
+/* menu */
+.menuicon {
+    font-size: 22px;
+}
+
+/* book */
+.animalListDiv {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+}
+.thumbnail {
+    .rounded-corners(8px);
+    width: 64px;
+    height: 64px;
+    background-color: @bgColor;
+    margin-right: 1em;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.4);
+}
+.animalListName {
+    font-size: 22px;
+}
+
+/* detail */
+#detail div {
+    p {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    p.jpName {
+        font-size: 24px;
+    }
+}

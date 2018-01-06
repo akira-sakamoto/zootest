@@ -1,0 +1,24 @@
+<!-- 動物図鑑詳細 -->
+<ons-page id="detail" ng-controller="AnimalDetailController" modifier="background">
+    <!-- ツールバー -->
+    <ons-toolbar modifier="toolbar">
+        <div class="left">
+            <ons-back-button modifier="toolbar">Back</ons-back-button>
+        </div>
+        <div class="center">動物図鑑</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-qrcode" class="toolbarIcon"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <!-- 本体 -->
+    <div class="photo"><img ng-src="{{urlPhoto}}"></div>
+    <p class="jpName"><a ng-href="{{urlWiki}}">{{jpName}}</a></p>
+    <p class="enName">英名: {{enName}}</p>
+    <p class="zlName">学名: {{zlName}}</p>
+    <p class="classified">分類: {{class}} {{order}} {{family}}</p>
+    <hr>
+    <p class="description">{{description}}</p>
+</ons-page>
